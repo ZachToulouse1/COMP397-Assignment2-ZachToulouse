@@ -92,15 +92,15 @@ var scenes;
                 outCome[spin] = Math.floor((Math.random() * 65) + 1);
                 switch (outCome[spin]) {
                     case this._checkRange(outCome[spin], 1, 27):
-                        betLine[spin] = "Blank";
+                        betLine[spin] = "Lemon";
                         this._blanks++;
                         break;
                     case this._checkRange(outCome[spin], 28, 37):
-                        betLine[spin] = "Grapes";
+                        betLine[spin] = "Grape";
                         this._grapes++;
                         break;
                     case this._checkRange(outCome[spin], 38, 46):
-                        betLine[spin] = "Banana";
+                        betLine[spin] = "Watermelon";
                         this._bananas++;
                         break;
                     case this._checkRange(outCome[spin], 47, 54):
@@ -112,11 +112,11 @@ var scenes;
                         this._cherries++;
                         break;
                     case this._checkRange(outCome[spin], 60, 62):
-                        betLine[spin] = "Bar";
+                        betLine[spin] = "Clover";
                         this._bars++;
                         break;
                     case this._checkRange(outCome[spin], 63, 64):
-                        betLine[spin] = "Bell";
+                        betLine[spin] = "Horseshoe";
                         this._bells++;
                         break;
                     case this._checkRange(outCome[spin], 65, 65):

@@ -44,6 +44,13 @@ var scenes;
             this._spinButton = new objects.Button("SpinButton", 450, 347, false);
             this.addChild(this._spinButton);
             this._spinButton.on("click", this._spinButtonClick, this);
+            // add RestartButton to the scene
+            this._restartButton = new objects.Button("RestartButton", 100, 445, false);
+            this.addChild(this._restartButton);
+            this._restartButton.on("click", this._restartButtonClick, this);
+            this._quitButton = new objects.Button("QuitButton", 400, 445, false);
+            this.addChild(this._quitButton);
+            this._quitButton.on("click", this._quitButtonClick, this);
             // add JackPot Text to the scene
             this._jackpotText = new objects.Label(this.jackpot.toString(), "14px Consolas", "#ff0000", 370, 115, false);
             this._jackpotText.textAlign = "right";
@@ -242,6 +249,21 @@ var scenes;
                 this.playerBet = 0;
                 this._betText.text = this.playerBet.toString();
                 this.winnings = 0;
+            }
+        };
+        // reset game for player on click
+        SlotMachine.prototype._restartButtonClick = function (event) {
+            this.playerMoney = 1000;
+            this._creditsText.text = this.playerMoney.toString();
+            this.playerBet = 0;
+            this._betText.text = this.playerBet.toString();
+            this.winnings = 0;
+            this._resultText.text = this.winnings.toString();
+        };
+        // quits game for player on click
+        SlotMachine.prototype._quitButtonClick = function (event) {
+            if (confirm("Quit Game?")) {
+                location.reload();
             }
         };
         return SlotMachine;

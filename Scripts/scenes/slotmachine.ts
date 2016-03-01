@@ -7,6 +7,8 @@ module scenes {
         private _bet10Button: objects.Button;
         private _bet100Button: objects.Button;
         private _spinButton: objects.Button;
+        private _restartButton: objects.Button;
+        private _quitButton: objects.Button;
         private _reels: createjs.Bitmap[];
         private _jackpotText: objects.Label;
         private _creditsText: objects.Label;
@@ -59,7 +61,16 @@ module scenes {
             // add SpinButton to the scene
             this._spinButton = new objects.Button("SpinButton", 450, 347, false);
             this.addChild(this._spinButton);
-            this._spinButton.on("click", this._spinButtonClick, this); 
+            this._spinButton.on("click", this._spinButtonClick, this);
+            
+            // add RestartButton to the scene
+            this._restartButton = new objects.Button("RestartButton", 100, 445, false);
+            this.addChild(this._restartButton);
+            this._restartButton.on("click", this._restartButtonClick, this); 
+            
+            this._quitButton = new objects.Button("QuitButton", 400, 445, false);
+            this.addChild(this._quitButton);
+            this._quitButton.on("click", this._quitButtonClick, this);
         
             // add JackPot Text to the scene
             this._jackpotText = new objects.Label(
@@ -303,6 +314,23 @@ module scenes {
                 this.playerBet = 0;
                 this._betText.text = this.playerBet.toString();
                 this.winnings = 0;
+            }
+        }
+        
+        // reset game for player on click
+        private _restartButtonClick(event: createjs.MouseEvent): void {
+            this.playerMoney = 1000;
+            this._creditsText.text = this.playerMoney.toString();
+            this.playerBet = 0;
+            this._betText.text = this.playerBet.toString();
+            this.winnings = 0;
+            this._resultText.text = this.winnings.toString();
+        }
+        
+        // quits game for player on click
+        private _quitButtonClick(event: createjs.MouseEvent): void {
+            if (confirm("Quit Game?")) {
+                location.reload();  
             }
         }
     }

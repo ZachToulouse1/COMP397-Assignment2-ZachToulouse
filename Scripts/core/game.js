@@ -19,16 +19,16 @@ var assetData = [
     { id: "Bet1Button", src: "../../Assets/images/Bet1Button.png" },
     { id: "Bet10Button", src: "../../Assets/images/Bet10Button.png" },
     { id: "Bet100Button", src: "../../Assets/images/Bet100Button.png" },
-    { id: "SpinButton", src: "../../Assets/images/SpinButton.png" },
+    { id: "SpinButton", src: "../../Assets/images/spinButton.png" },
     { id: "BlackBackground", src: "../../Assets/images/BlackBackground.png" },
     { id: "WhiteBackground", src: "../../Assets/images/WhiteBackground.png" },
-    { id: "Blank", src: "../../Assets/images/Blank.png" },
-    { id: "Grapes", src: "../../Assets/images/Grapes.png" },
-    { id: "Banana", src: "../../Assets/images/Banana.png" },
+    { id: "Lemon", src: "../../Assets/images/Lemon.png" },
+    { id: "Grape", src: "../../Assets/images/Grape.png" },
+    { id: "Watermelon", src: "../../Assets/images/Watermelon.png" },
     { id: "Cherry", src: "../../Assets/images/Cherry.png" },
     { id: "Orange", src: "../../Assets/images/Orange.png" },
-    { id: "Bar", src: "../../Assets/images/Bar.png" },
-    { id: "Bell", src: "../../Assets/images/Bell.png" },
+    { id: "Clover", src: "../../Assets/images/Clover.png" },
+    { id: "Horseshoe", src: "../../Assets/images/Horseshoe.png" },
     { id: "Seven", src: "../../Assets/images/Seven.png" }
 ];
 function preload() {

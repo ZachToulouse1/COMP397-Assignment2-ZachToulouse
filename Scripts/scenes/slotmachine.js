@@ -29,35 +29,35 @@ var scenes;
             this._backgroundImage = new createjs.Bitmap(assets.getResult("SlotMachine"));
             this.addChild(this._backgroundImage);
             // add Bet1Button to the scene
-            this._bet1Button = new objects.Button("Bet1Button", 168, 382, false);
+            this._bet1Button = new objects.Button("Bet1Button", 100, 347, false);
             this.addChild(this._bet1Button);
             this._bet1Button.on("click", this._bet1ButtonClick, this);
             // add Bet10Button to the scene
-            this._bet10Button = new objects.Button("Bet10Button", 240, 382, false);
+            this._bet10Button = new objects.Button("Bet10Button", 200, 347, false);
             this.addChild(this._bet10Button);
             this._bet10Button.on("click", this._bet10ButtonClick, this);
             // add Bet100Button to the scene
-            this._bet100Button = new objects.Button("Bet100Button", 312, 382, false);
+            this._bet100Button = new objects.Button("Bet100Button", 300, 347, false);
             this.addChild(this._bet100Button);
             this._bet100Button.on("click", this._bet100ButtonClick, this);
             // add SpinButton to the scene
-            this._spinButton = new objects.Button("SpinButton", 402, 382, false);
+            this._spinButton = new objects.Button("SpinButton", 450, 347, false);
             this.addChild(this._spinButton);
             this._spinButton.on("click", this._spinButtonClick, this);
             // add JackPot Text to the scene
-            this._jackpotText = new objects.Label(this.jackpot.toString(), "14px Consolas", "#ff0000", 353, 107, false);
+            this._jackpotText = new objects.Label(this.jackpot.toString(), "14px Consolas", "#ff0000", 370, 115, false);
             this._jackpotText.textAlign = "right";
             this.addChild(this._jackpotText);
             // add Credits Text to the scene
-            this._creditsText = new objects.Label(this.playerMoney.toString(), "14px Consolas", "#ff0000", 254, 303, false);
+            this._creditsText = new objects.Label(this.playerMoney.toString(), "16px Consolas", "#ff0000", 240, 305, false);
             this._creditsText.textAlign = "right";
             this.addChild(this._creditsText);
             // add Bet Text to the scene
-            this._betText = new objects.Label(this.playerBet.toString(), "14px Consolas", "#ff0000", 351, 303, false);
+            this._betText = new objects.Label(this.playerBet.toString(), "16px Consolas", "#ff0000", 385, 305, false);
             this._betText.textAlign = "right";
             this.addChild(this._betText);
             // add Result Text to the scene
-            this._resultText = new objects.Label(this.winnings.toString(), "14px Consolas", "#ff0000", 450, 303, false);
+            this._resultText = new objects.Label(this.winnings.toString(), "16px Consolas", "#ff0000", 525, 305, false);
             this._resultText.textAlign = "right";
             this.addChild(this._resultText);
             // Initialize Array of Bitmaps 
@@ -244,7 +244,7 @@ var scenes;
             }
         };
         return SlotMachine;
-    }(objects.Scene));
+    })(objects.Scene);
     scenes.SlotMachine = SlotMachine;
 })(scenes || (scenes = {}));
 //# sourceMappingURL=slotmachine.js.map

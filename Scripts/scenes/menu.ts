@@ -19,7 +19,7 @@ module scenes {
             // add the WELCOME Label to the MENU scene
             this._welcomeLabel = new objects.Label(
                 "SLOT MACHINE GAME...",
-                "60px Consolas",
+                "40px Consolas",
                 "#000000",
                 config.Screen.CENTER_X,
                 config.Screen.CENTER_Y, true);

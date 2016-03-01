@@ -1,3 +1,11 @@
+//Source File Name: menu.ts
+//Author's Name: Zachariah Toulouse
+//Last Modified By: Zachariah Toulouse
+//Date Last Modified: Feb. 29th, 2016
+//Program Description: This program is for COMP397 Assignment 2 Slot Machine. It was created by Zachariah Toulouse.
+//Revision History:
+    //- Feb. 29th, 2016 - Changed welcome label text
+
 // MENU SCENE
 module scenes {
     export class Menu extends objects.Scene {

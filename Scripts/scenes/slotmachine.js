@@ -1,3 +1,10 @@
+//Source File Name: slotmachine.ts
+//Author's Name: Zachariah Toulouse
+//Last Modified By: Zachariah Toulouse
+//Date Last Modified: Feb. 29th, 2016
+//Program Description: This program is for COMP397 Assignment 2 Slot Machine. It was created by Zachariah Toulouse.
+//Revision History:
+//- Feb. 29th, 2016 - Added slot machine logic and images. Finished Slot Machine.
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }

@@ -299,11 +299,11 @@ module scenes {
                 
                 this._determineWinnings();
                 
-                // reset player's bet to zero
+                // reset player's bet & winnings back to 0
                 this.playerBet = 0;
                 this._betText.text = this.playerBet.toString();
+                this.winnings = 0;
             }
-
         }
     }
 }

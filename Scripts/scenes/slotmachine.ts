@@ -217,7 +217,7 @@ module scenes {
                     this.winnings = this.playerBet * 75;
                 }
                 else if (this._seven == 3) {
-                    this.winnings = this.playerBet * 100;
+                    this.winnings = this.playerBet * 100 + this.jackpot;
                 }
                 else if (this._grape == 2) {
                     this.winnings = this.playerBet * 2;

@@ -11,14 +11,14 @@ var scenes;
         // CONSTRUCTOR ++++++++++++++++++++++
         function SlotMachine() {
             _super.call(this);
-            this._grapes = 0;
-            this._bananas = 0;
-            this._oranges = 0;
-            this._cherries = 0;
-            this._bars = 0;
-            this._bells = 0;
-            this._sevens = 0;
-            this._blanks = 0;
+            this._grape = 0;
+            this._watermelon = 0;
+            this._orange = 0;
+            this._cherry = 0;
+            this._clover = 0;
+            this._horseshoe = 0;
+            this._seven = 0;
+            this._lemon = 0;
         }
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
@@ -100,35 +100,35 @@ var scenes;
                 switch (outCome[spin]) {
                     case this._checkRange(outCome[spin], 1, 27):
                         betLine[spin] = "Lemon";
-                        this._blanks++;
+                        this._lemon++;
                         break;
                     case this._checkRange(outCome[spin], 28, 37):
                         betLine[spin] = "Grape";
-                        this._grapes++;
+                        this._grape++;
                         break;
                     case this._checkRange(outCome[spin], 38, 46):
                         betLine[spin] = "Watermelon";
-                        this._bananas++;
+                        this._watermelon++;
                         break;
                     case this._checkRange(outCome[spin], 47, 54):
                         betLine[spin] = "Orange";
-                        this._oranges++;
+                        this._orange++;
                         break;
                     case this._checkRange(outCome[spin], 55, 59):
                         betLine[spin] = "Cherry";
-                        this._cherries++;
+                        this._cherry++;
                         break;
                     case this._checkRange(outCome[spin], 60, 62):
                         betLine[spin] = "Clover";
-                        this._bars++;
+                        this._clover++;
                         break;
                     case this._checkRange(outCome[spin], 63, 64):
                         betLine[spin] = "Horseshoe";
-                        this._bells++;
+                        this._horseshoe++;
                         break;
                     case this._checkRange(outCome[spin], 65, 65):
                         betLine[spin] = "Seven";
-                        this._sevens++;
+                        this._seven++;
                         break;
                 }
             }
@@ -136,50 +136,51 @@ var scenes;
         };
         /* This function calculates the player's winnings, if any */
         SlotMachine.prototype._determineWinnings = function () {
-            if (this._blanks == 0) {
-                if (this._grapes == 3) {
+            if (this._lemon == 0) {
+                if (this._grape == 3) {
                     this.winnings = this.playerBet * 10;
                 }
-                else if (this._bananas == 3) {
+                else if (this._watermelon == 3) {
                     this.winnings = this.playerBet * 20;
+                    this._jackpotText.text = "Congratulations! You won the jackpot!!!";
                 }
-                else if (this._oranges == 3) {
+                else if (this._orange == 3) {
                     this.winnings = this.playerBet * 30;
                 }
-                else if (this._cherries == 3) {
+                else if (this._cherry == 3) {
                     this.winnings = this.playerBet * 40;
                 }
-                else if (this._bars == 3) {
+                else if (this._clover == 3) {
                     this.winnings = this.playerBet * 50;
                 }
-                else if (this._bells == 3) {
+                else if (this._horseshoe == 3) {
                     this.winnings = this.playerBet * 75;
                 }
-                else if (this._sevens == 3) {
+                else if (this._seven == 3) {
                     this.winnings = this.playerBet * 100;
                 }
-                else if (this._grapes == 2) {
+                else if (this._grape == 2) {
                     this.winnings = this.playerBet * 2;
                 }
-                else if (this._bananas == 2) {
+                else if (this._watermelon == 2) {
                     this.winnings = this.playerBet * 2;
                 }
-                else if (this._oranges == 2) {
+                else if (this._orange == 2) {
                     this.winnings = this.playerBet * 3;
                 }
-                else if (this._cherries == 2) {
+                else if (this._cherry == 2) {
                     this.winnings = this.playerBet * 4;
                 }
-                else if (this._bars == 2) {
+                else if (this._clover == 2) {
                     this.winnings = this.playerBet * 5;
                 }
-                else if (this._bells == 2) {
+                else if (this._horseshoe == 2) {
                     this.winnings = this.playerBet * 10;
                 }
-                else if (this._sevens == 2) {
+                else if (this._seven == 2) {
                     this.winnings = this.playerBet * 20;
                 }
-                else if (this._sevens == 1) {
+                else if (this._seven == 1) {
                     this.winnings = this.playerBet * 5;
                 }
                 else {
@@ -196,14 +197,14 @@ var scenes;
             this._resetFruitTally();
         };
         SlotMachine.prototype._resetFruitTally = function () {
-            this._grapes = 0;
-            this._bananas = 0;
-            this._oranges = 0;
-            this._cherries = 0;
-            this._bars = 0;
-            this._bells = 0;
-            this._sevens = 0;
-            this._blanks = 0;
+            this._grape = 0;
+            this._watermelon = 0;
+            this._orange = 0;
+            this._cherry = 0;
+            this._clover = 0;
+            this._horseshoe = 0;
+            this._seven = 0;
+            this._lemon = 0;
         };
         SlotMachine.prototype._initializeBitmapArray = function () {
             this._reels = new Array();
